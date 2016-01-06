@@ -8,6 +8,8 @@
         "app/main/main.controller.ts",
         "app/products/products.module.ts",
         "app/products/products.controller.ts",
-        "app/products/product.ts"
+        "app/domain/product.ts",
+        "app/shared/shared.module.ts",
+        "app/shared/data-access.service.ts"
     ]
 }
