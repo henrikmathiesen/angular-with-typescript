@@ -5,14 +5,14 @@ module main.products {
     interface IProductsModel {
         title: string;
         showImage: boolean;
-        products: any[];
+        products: main.domain.IProduct[];
         toggleImage(): void;
     }
 
     class ProductsCtrl implements IProductsModel {
         title: string;
         showImage: boolean;
-        products: any[];
+        products: main.domain.IProduct[];
 
         constructor() {
             this.title = "Product list"
@@ -47,7 +47,10 @@ module main.products {
                 }
             ]
 
-
+            var newProduct = new main.domain.Product(3, "Saw", "TBX-002", new Date(2002,3,1), 100, "15-inch steel blade hand saw", "https://openclipart.org/download/27070/egore911-saw.svg");
+            newProduct.price = newProduct.calculateDiscount(30);
+            
+            this.products.push(newProduct);
 
             console.log("prod ctrl");
         }
