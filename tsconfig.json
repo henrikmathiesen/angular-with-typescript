@@ -1,8 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es5"
+        "target": "es5",
+        "removeComments": true
     },
     "files": [
-        ""
+        "app/main/main.module.ts",
+        "app/main/main.controller.ts",
+        "app/products/products.module.ts",
+        "app/products/products.controller.ts"
     ]
 }

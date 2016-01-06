@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="main">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Acme Product Management</title>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="description" content="Angular Architecture">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/main/main.css">
 </head>
 
-<body><!-- ng-app="productManagement" -->
+<body ng-controller="main as mainCtrl" ng-cloak="">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <div class="navbar-brand">Acme Product Management</div>
+                <div class="navbar-brand">{{mainCtrl.title}}</div>
             </div>
         </div>
     </nav>
@@ -19,20 +23,12 @@
         <div ng-include="'app/products/product-list.template.html'"></div>
     </div>
 
-    <!-- Library Scripts -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     
-    <!-- Application Script -->
     <script src="bld/app.js"></script>
-
-    <!-- Domain Classes -->
-
-    <!-- Services -->
-
-    <!-- Controllers -->
 </body>
 
 </html>

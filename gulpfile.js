@@ -7,7 +7,7 @@ var del = require('del');
 
 
 //
-// Use tsconfig file (*that VS Code likes for its code features (go to symbol for example)) a source for the ts task
+// Use tsconfig file (*that VS Code likes for its code features (go to symbol for example)) as source for the ts task
 // * https://code.visualstudio.com/Docs/languages/typescript
 //
 var tsProject = ts.createProject('tsconfig.json');
