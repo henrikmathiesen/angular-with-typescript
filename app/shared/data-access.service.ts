@@ -11,7 +11,7 @@ module main.shared {
         
     }
     
-    class DataAccessService implements IDataAccessService {
+    export class DataAccessService implements IDataAccessService {
         constructor(private $resource: ng.resource.IResourceService){
             
         }
