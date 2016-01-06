@@ -1,3 +1,5 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-angular.module('main.products', []);
+module main.products {
+    angular.module('main.products', []);
+}

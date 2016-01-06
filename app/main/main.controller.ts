@@ -1,18 +1,22 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-interface IMainModel {
-    title: string;
-}
-
-class MainCtrl implements IMainModel {
-    title: string;
+module main {
     
-    constructor(){
-        this.title = "Acme Product Management"
-        console.log("main ctrl");
+    interface IMainModel {
+        title: string;
     }
-}
 
-angular
-    .module('main')
-    .controller('main', MainCtrl);
+    class MainCtrl implements IMainModel {
+        title: string;
+        
+        constructor(){
+            this.title = "Acme Product Management"
+            console.log("main ctrl");
+        }
+    }
+
+    angular
+        .module('main')
+        .controller('main', MainCtrl);
+    
+}
