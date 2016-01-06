@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/henrikmathiesen/angularWithTypeScript/issues"
   },
-  "homepage": "https://github.com/henrikmathiesen/angularWithTypeScript#readme"
+  "homepage": "https://github.com/henrikmathiesen/angularWithTypeScript#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
