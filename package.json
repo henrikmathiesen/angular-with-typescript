@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/henrikmathiesen/angularWithTypeScript#readme",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
-    "gulp-typescript": "^2.10.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.10.0",
+    "gulp-uglify": "^1.5.1"
   }
 }

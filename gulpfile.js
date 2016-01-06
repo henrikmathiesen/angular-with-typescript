@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
+var sourceMaps = require('gulp-sourcemaps');
 
 //
 // Use tsconfig file (*that VS Code likes for its code features (go to symbol for example)) a source for the ts task
