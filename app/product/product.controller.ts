@@ -7,13 +7,17 @@ module main.product {
         product: main.domain.IProduct;
     }
     
+    interface IProductParams extends ng.route.IRouteParamsService {
+        productId: number;
+    }
+    
     class ProductCtrl implements IProductModel {
         title: string;
         product: main.domain.IProduct;
         
-        constructor(private $routeParams: any, private dataAccessService: main.shared.IDataAccessService){
+        constructor(private $routeParams: IProductParams, private dataAccessService: main.shared.IDataAccessService){
             this.title = "Product"
-            dataAccessService.getProductResource().get({productId: $routeParams['productId']}, (data: main.domain.IProduct) => {
+            dataAccessService.getProductResource().get({productId: $routeParams.productId}, (data: main.domain.IProduct) => {
                 this.product = data;
             });
         }
