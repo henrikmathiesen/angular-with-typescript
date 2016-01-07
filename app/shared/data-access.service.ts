@@ -2,7 +2,7 @@
 
 module main.shared {
     
-    interface IDataAccessService {
+    export interface IDataAccessService {
         getProductResource(): ng.resource.IResourceClass<IProductResource>;
     }
     
@@ -11,7 +11,7 @@ module main.shared {
         
     }
     
-    export class DataAccessService implements IDataAccessService {
+    class DataAccessService implements IDataAccessService {
         constructor(private $resource: ng.resource.IResourceService){
             
         }

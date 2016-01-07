@@ -14,7 +14,7 @@ module main.products {
         showImage: boolean;
         products: main.domain.IProduct[];
 
-        constructor(private dataAccessService: main.shared.DataAccessService) {
+        constructor(private dataAccessService: main.shared.IDataAccessService) {
             this.title = "Product list"
             this.showImage = false;
             this.products = [];
@@ -29,6 +29,8 @@ module main.products {
         toggleImage(): void {
             this.showImage = !this.showImage;
         }
+        
+        
     }
 
 
