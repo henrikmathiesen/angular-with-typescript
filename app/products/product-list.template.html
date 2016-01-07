@@ -31,6 +31,11 @@
                 <td>{{ product.productCode }}</td>
                 <td>{{ product.releaseDate | date }}</td>
                 <td>{{ product.price | currency }}</td>
+                <td>
+                    <button type="button" 
+                            class="btn btn-primary"
+                            ng-click="productsCtrl.toggleDiscount(product)">{{(!product.showDiscount) ? ("Show ") : ("Hide ")}}discount</button>
+                </td>
             </tr>
             </tbody>
         </table>

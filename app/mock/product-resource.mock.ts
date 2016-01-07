@@ -17,17 +17,17 @@ module main.mock {
             "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png");
         products.push(product);
         
-        product = new main.domain.Product(3, "Saw", "TBX-002", new Date(2002, 3, 1), 16.95,
+        product = new main.domain.Product(3, "Saw", "TBX-002", new Date(2002, 3, 1), 200,
             "15-inch steel blade hand saw",
             "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png");
         products.push(product);
  
-         product = new main.domain.Product(4, "Hammer", "TBX-0048", new Date(2013, 4, 21), 8.99,
+         product = new main.domain.Product(4, "Hammer", "TBX-0048", new Date(2013, 4, 21), 1000,
             "Curved claw steel hammer",
             "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png");
         products.push(product);
         
-         product = new main.domain.Product(5, "Video Game Controller", "GMG-0042", new Date(2012, 9, 25), 35.95,
+         product = new main.domain.Product(5, "Video Game Controller", "GMG-0042", new Date(2012, 9, 25), 100.00,
             "Standard five-button video game controller",
             "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png");
         products.push(product);

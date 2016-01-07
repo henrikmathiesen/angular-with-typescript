@@ -8,10 +8,13 @@ module main.domain {
         price: number;
         description: string;
         imageUrl: string;
-        calculateDiscount(percent: number): number;
+        showDiscount: boolean;
+        beforeDiscountedPrice: number;
     }
     
     export class Product implements IProduct {
+        showDiscount: boolean;
+        beforeDiscountedPrice: number;
         
         constructor(public productId: number,
                     public productName: string,
@@ -20,10 +23,13 @@ module main.domain {
                     public price: number,
                     public description: string,
                     public imageUrl: string){
+                        
+                        this.showDiscount = false;
+                        this.beforeDiscountedPrice = price;
         }
         
-        calculateDiscount(percent: number): number {
-            return this.price - (this.price * (percent / 100));
+        static calculateDiscount(price: number, percent: number): number {
+            return price - (price * (percent / 100));
         }
     }
     
