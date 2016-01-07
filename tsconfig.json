@@ -6,11 +6,19 @@
     "files": [
         "app/main/main.module.ts",
         "app/main/main.controller.ts",
+        
         "app/products/products.module.ts",
         "app/products/products.controller.ts",
+        
+        "app/product/product.module.ts",
+        "app/product/product.controller.ts",
+        
         "app/domain/product.ts",
+        
         "app/shared/shared.module.ts",
+        
         "app/shared/data-access.service.ts",
+        
         "app/mock/mock.module.ts",
         "app/mock/product-resource.mock.ts"
     ]

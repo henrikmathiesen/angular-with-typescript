@@ -8,7 +8,6 @@ module main.shared {
     
     // We want an interface for the return type of $resource
     interface IProductResource extends ng.resource.IResource<main.domain.IProduct> {
-        
     }
     
     class DataAccessService implements IDataAccessService {
