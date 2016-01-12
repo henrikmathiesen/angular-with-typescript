@@ -29,3 +29,7 @@ gulp.task('default', ['clean-bld'], function() {
         .pipe(sourceMaps.write())
         .pipe(gulp.dest('bld'));
 });
+
+gulp.task('watch', ['default'], function(){
+    gulp.watch('app/**/*.ts', ['default']);
+});

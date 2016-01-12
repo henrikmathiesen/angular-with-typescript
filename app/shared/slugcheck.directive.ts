@@ -19,7 +19,7 @@
             scope: {},
             link: function(scope: ng.IScope, $element: ng.IAugmentedJQuery, attrs: ng.IAttributes): void {
                 $element.on('click', ():void => {
-                    console.log("clicked");
+                    console.log("WATCHING");
                 })
             }
         };
