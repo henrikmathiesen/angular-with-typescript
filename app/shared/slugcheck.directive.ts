@@ -10,21 +10,32 @@
 
 
 // An iifi for clouser
+// - return an anonymous object instead of following the Pluralsight course pattern, else ng-annoate wont work
 
 (() : void => {
     
     function slugCheck($timeout: ng.ITimeoutService): ng.IDirective {
-        var directive = <ng.IDirective> {
+        return <ng.IDirective> {
             restrict: 'A',
             scope: {},
             link: function(scope: ng.IScope, $element: ng.IAugmentedJQuery, attrs: ng.IAttributes): void {
+                console.log("SCOPE in link function");
+                console.log(scope);
+                console.log("/SCOPE in link function");
                 $element.on('click', ():void => {
-                    console.log("WATCHING");
+                    $timeout(function(){
+                        console.log("using the timeout service");
+                    }, 250);
                 })
-            }
+            },
+            controller: function($scope: any){
+                console.log("SCOPE in controller");
+                console.log($scope);
+                console.log("/SCOPE in controller");
+            },
+            controllerAs: 'ctrl',
+            bindToController: true
         };
-        
-        return directive;
     }
     
     angular
