@@ -4,6 +4,7 @@ var sourceMaps = require('gulp-sourcemaps');
 var concatJs = require('gulp-concat');
 var uglifyJs = require('gulp-uglify');
 var del = require('del');
+var ngAnnotate = require('gulp-ng-annotate');
 
 
 //
@@ -23,6 +24,8 @@ gulp.task('default', ['clean-bld'], function() {
 	
 	return tsResult.js
         .pipe(concatJs('app.js'))
+        .pipe(ngAnnotate())
+        .pipe(uglifyJs())
         .pipe(sourceMaps.write())
         .pipe(gulp.dest('bld'));
 });
