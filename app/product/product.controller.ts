@@ -16,7 +16,7 @@ module main.product {
         product: main.domain.IProduct;
         
         constructor(private $routeParams: IProductParams, private dataAccessService: main.shared.IDataAccessService){
-            this.title = "Product"
+            this.title = "Product";
             dataAccessService.getProductResource().get({productId: $routeParams.productId}, (data: main.domain.IProduct) => {
                 this.product = data;
             });

@@ -22,6 +22,9 @@
         "app/mock/mock.module.ts",
         "app/mock/product-resource.mock.ts",
         
+        "app/animate/animate.module.ts",
+        "app/animate/animate.controller.ts",
+        
         "app/shared/slugcheck.directive.ts"
     ]
 }

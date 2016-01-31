@@ -16,13 +16,28 @@ var minifyCss = require('gulp-minify-css');
 // * https://code.visualstudio.com/Docs/languages/typescript
 //
 var tsProject = ts.createProject('tsconfig.json');
+var lessSrc = 'app/main/main.less';
+var lessSrcWatch = 'app/**/*.less';
+var tsSrcWatch = 'app/**/*.ts';
+var buildFolder = 'bld';
 
 gulp.task('clean-bld', function () {
     del.sync('bld');
 });
 
-gulp.task('default', ['clean-bld'], function() {
-	var tsResult = tsProject.src()
+gulp.task('less', function(){
+    return gulp
+        .src(lessSrc)
+        .pipe(sourceMaps.init())
+        .pipe(less())
+        .pipe(autoprefix({ browsers: ['last 3 versions'] }))
+        .pipe(minifyCss())
+        .pipe(sourceMaps.write())
+        .pipe(gulp.dest(buildFolder));
+});
+
+gulp.task('ts', function(){
+    var tsResult = tsProject.src()
         .pipe(sourceMaps.init())
         .pipe(ts(tsProject));
 	
@@ -31,9 +46,14 @@ gulp.task('default', ['clean-bld'], function() {
         .pipe(ngAnnotate())
         .pipe(uglifyJs())
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest('bld'));
+        .pipe(gulp.dest(buildFolder));
+});
+
+gulp.task('default', ['clean-bld', 'ts', 'less'], function() {
+	
 });
 
 gulp.task('watch', ['default'], function(){
-    gulp.watch('app/**/*.ts', ['default']);
+    gulp.watch(tsSrcWatch, ['ts']);
+    gulp.watch(lessSrcWatch, ['less']);
 });

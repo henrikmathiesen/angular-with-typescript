@@ -1,7 +1,7 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
 module main {
-    angular.module('main', ['ngRoute', 'main.products', 'main.product'])
+    angular.module('main', ['ngRoute', 'main.products', 'main.product', 'main.animate'])
     
     .config(function($routeProvider: ng.route.IRouteProvider){
         
@@ -13,6 +13,10 @@ module main {
             .when('/product/:productId', {
                 templateUrl: '/app/product/product.template.html',
                 controller: 'product as productCtrl'
+            })
+            .when('/animate', {
+                templateUrl: '/app/animate/animate.template.html',
+                controller: 'animate as animateCtrl'
             })
         
             .otherwise('/products');
