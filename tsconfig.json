@@ -24,6 +24,7 @@
         
         "app/animate/animate.module.ts",
         "app/animate/animate.controller.ts",
+        "app/animate/animate.directive.ts",
         
         "app/shared/slugcheck.directive.ts"
     ]
