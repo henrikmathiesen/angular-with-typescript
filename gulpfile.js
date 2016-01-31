@@ -6,6 +6,10 @@ var uglifyJs = require('gulp-uglify');
 var del = require('del');
 var ngAnnotate = require('gulp-ng-annotate');
 
+var less = require('gulp-less');
+var autoprefix = require('gulp-autoprefixer');
+var minifyCss = require('gulp-minify-css');
+
 
 //
 // Use tsconfig file (*that VS Code likes for its code features (go to symbol for example)) as source for the ts task
