@@ -26,6 +26,8 @@
         "app/animate/animate.controller.ts",
         "app/animate/animate.directive.ts",
         
-        "app/shared/slugcheck.directive.ts"
+        "app/shared/slugcheck.directive.ts",
+        
+        "app/shared/strong-typed-ctrl-scope.directive.ts"
     ]
 }
