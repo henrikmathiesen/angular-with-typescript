@@ -9,6 +9,8 @@
 //
 // Since we wont expose the directive to other parts of the app, we do NOT write an interface
 // There is also little benefit in writing the directive as a class
+//
+// But there could be a good idea to type the scope that is exposed to the view, so its clearer by reading the interface?
 
 
 // An iifi for clouser

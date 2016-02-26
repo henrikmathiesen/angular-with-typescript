@@ -7,9 +7,7 @@ module main.animate {
         animationClass: string;
         clickIconsToggle: string;
     }
-
-
-
+    
     function animate(): ng.IDirective {
         return <ng.IDirective>{
             restrict: 'A',
