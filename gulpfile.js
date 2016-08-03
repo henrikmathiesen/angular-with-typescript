@@ -26,7 +26,7 @@ gulp.task('clean-bld', function () {
 });
 
 //
-// Do a production built with no sourcemap
+// Do a production build with no sourcemap
 //
 
 gulp.task('less', function(){
