@@ -10,6 +10,7 @@ var less = require('gulp-less');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 
+var argv = require('yargs').argv;
 var gulpif = require('gulp-if');
 
 
@@ -23,6 +24,8 @@ var lessSrcWatch = 'app/**/*.less';
 var tsSrcWatch = 'app/**/*.ts';
 var buildFolder = 'bld';
 
+var isProduction = (argv.prod) ? (true) : (false); // --prod
+
 gulp.task('clean-bld', function () {
     del.sync('bld');
 });
@@ -30,24 +33,24 @@ gulp.task('clean-bld', function () {
 gulp.task('less', function(){
     return gulp
         .src(lessSrc)
-        .pipe(sourceMaps.init())
+        .pipe(gulpif(!isProduction, sourceMaps.init()))
         .pipe(less())
         .pipe(autoprefix({ browsers: ['last 3 versions'] }))
         .pipe(minifyCss())
-        .pipe(sourceMaps.write())
+        .pipe(gulpif(!isProduction, sourceMaps.write()))
         .pipe(gulp.dest(buildFolder));
 });
 
 gulp.task('ts', function(){
     var tsResult = tsProject.src()
-        .pipe(sourceMaps.init())
+        .pipe(gulpif(!isProduction, sourceMaps.init()))
         .pipe(ts(tsProject));
 	
 	return tsResult.js
         .pipe(concatJs('app.js'))
         .pipe(ngAnnotate())
         .pipe(uglifyJs())
-        .pipe(sourceMaps.write())
+        .pipe(gulpif(!isProduction, sourceMaps.write()))
         .pipe(gulp.dest(buildFolder));
 });
 
