@@ -10,6 +10,8 @@ var less = require('gulp-less');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 
+var gulpif = require('gulp-if');
+
 
 //
 // Use tsconfig file (*that VS Code likes for its code features (go to symbol for example)) as source for the ts task
@@ -24,10 +26,6 @@ var buildFolder = 'bld';
 gulp.task('clean-bld', function () {
     del.sync('bld');
 });
-
-//
-// Do a production build with no sourcemap
-//
 
 gulp.task('less', function(){
     return gulp
