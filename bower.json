@@ -1,7 +1,7 @@
 {
-  "name": "angularwithtypescript",
+  "name": "angular-with-typescript",
   "version": "0.0.0",
-  "homepage": "https://github.com/henrikmathiesen/angularWithTypeScript",
+  "homepage": "https://github.com/henrikmathiesen/angular-with-typescript",
   "authors": [
     "Henrik <henrik_mathiesen@hotmail.com>"
   ],
@@ -14,10 +14,10 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.8",
-    "angular-mocks": "~1.4.8",
-    "angular-resource": "~1.4.8",
-    "angular-route": "~1.4.8",
-    "bootstrap": "~3.3.6"
+    "angular": "1.4.8",
+    "angular-mocks": "1.4.8",
+    "angular-resource": "1.4.8",
+    "angular-route": "1.4.8",
+    "bootstrap": "3.3.6"
   }
 }
