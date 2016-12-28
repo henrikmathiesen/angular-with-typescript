@@ -4,7 +4,8 @@
   "description": "Based on Pluralsight course https://app.pluralsight.com/library/courses/angular-typescript/table-of-contents",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "tsd install"
   },
   "repository": {
     "type": "git",
