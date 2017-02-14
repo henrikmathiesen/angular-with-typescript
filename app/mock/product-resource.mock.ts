@@ -1,5 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
 module main.mock {
     
     function mockRun($httpBackend: ng.IHttpBackendService) : void {

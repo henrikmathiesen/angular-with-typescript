@@ -1,5 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
 module main {
     angular.module('main', ['ngRoute', 'main.products', 'main.product', 'main.animate'])
     

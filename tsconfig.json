@@ -4,6 +4,12 @@
         "removeComments": true
     },
     "files": [
+        "typings/angularjs/angular.d.ts",
+        "typings/angularjs/angular-mocks.d.ts",
+        "typings/angularjs/angular-resource.d.ts",
+        "typings/angularjs/angular-route.d.ts",
+        "typings/jquery/jquery.d.ts",
+
         "app/main/main.module.ts",
         "app/main/main.controller.ts",
         

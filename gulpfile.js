@@ -44,7 +44,8 @@ gulp.task('less', function(){
 gulp.task('ts', function(){
     var tsResult = tsProject.src()
         .pipe(gulpif(!isProduction, sourceMaps.init()))
-        .pipe(ts(tsProject));
+        .pipe(ts(tsProject))
+        .on('error', function(){ process.exit(1) });
 	
 	return tsResult.js
         .pipe(concatJs('app.js'))
